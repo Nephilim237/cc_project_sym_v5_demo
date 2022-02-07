@@ -1,0 +1,85 @@
+<div class="bg-dark cc-profile-left">
+    <div class="d-flex flex-column p-3 text-white h100">
+        <div class="card bg-transparent border-0 rounded-0">
+{#            <img src="{{ asset('uploads/profile/'~ app.user.image | imagine_filter('profile_picture_filter')) }}" alt=""#}
+{#                 class="card-img-top img-rounded img-medium mx-auto">#}
+            <div class="card-body px-0 text-center">
+                <h5 class="card-title mb-0">{{ app.user.fullName }}</h5>
+                <h6 class="green">Admin</h6>
+                <p class="profile-buttons d-flex justify-content-center">
+                    <a href="#" class="btn btn-warning mx-1 btn-sm">S'abonner</a>
+                    <a href="#" class="btn btn-light mx-1 btn-sm">Message</a>
+                </p>
+            </div>
+            <div class="dropdown-divider border-green"></div>
+
+            <nav class="flex-column">
+                <a href="{{ path('admin_home') }}" class="nav-link text-white p-0 active" data-bs-toggle="tooltip"
+                   title="Tableau de bord"><i class="ri-dashboard-line"></i>
+                    Tableau de bord</a>
+                <a href="{{ path('category_home') }}" class="nav-link text-white p-0" data-bs-toggle="tooltip"
+                   title="Liste des catégories"><i class="ri-folder-5-line"></i>
+                    Liste des catégories</a>
+                <a href="#" class="nav-link text-white p-0" data-bs-toggle="tooltip"
+                   title="Liste des articles"><i class="ri-article-line"></i>
+                    Liste des articles</a>
+                <a href="#" class="nav-link text-white p-0" data-bs-toggle="tooltip" title="Liste des utilisateurs"><i
+                            class="ri-team-fill"></i> Liste des utilisateurs</a>
+                <a href="#" class="nav-link text-white p-0" data-bs-toggle="tooltip" title="Liste des commentaires"><i
+                            class="ri-discuss-line"></i>
+                    Liste des commentaires</a>
+                <a href="#" class="nav-link text-white p-0" data-bs-toggle="tooltip" title="aide"><i
+                            class="ri-questionnaire-fill"></i> Aide</a>
+            </nav>
+            <div class="dropdown-divider border-green"></div>
+
+            <div class="card-body text-capitalize text-center row">
+                <div class="col-sm-4">
+                    <a href="#"  data-bs-toggle="tooltip" title="Projets">
+                        <h6 class="profile stat-value m-0">{{ app.user.cours | length }}</h6>
+                        <i class="ri-folder-5-fill fs-5"></i>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#"  data-bs-toggle="tooltip" title="Commentaires">
+                        <h6 class="profile stat-value m-0">{{ app.user.cours | length }}</h6>
+                        <i class="ri-discuss-line fs-5"></i>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#"  data-bs-toggle="tooltip" title="Articles">
+                        <h6 class="profile stat-value m-0">{{ app.user.cours | length }}</h6>
+                        <i class="ri-input-method-fill fs-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown-divider border-green"></div>
+
+            <div class="card-body">
+                <h6 class="text-center text-info">A propos de {{ app.user.fullName }}</h6>
+                <p class="text-white-50">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                    dolor eligendi ipsum magni nemo, obcaecati qui sequi voluptatibus?
+                    Alias dignissimos dolor illum maxime necessitatibus officiis quos,
+                    ratione repellendus sed totam?
+                </p>
+            </div>
+            <div class="dropdown-divider border-green"></div>
+
+            <div class="card-header text-center text-uppercase">
+                <i class="ri-global-fill"></i> Liens importants
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent border-secondary border-bottom">
+                    <a href="#" class="text-light"><i class="ri-facebook-circle-fill"></i> Facebook</a>
+                </li>
+                <li class="list-group-item bg-transparent border-secondary border-bottom">
+                    <a href="#" class="text-light"><i class="ri-twitter-fill"></i> Twitter</a>
+                </li>
+                <li class="list-group-item bg-transparent border-secondary border-bottom">
+                    <a href="#" class="text-light"><i class="ri-youtube-line"></i> Youtube</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

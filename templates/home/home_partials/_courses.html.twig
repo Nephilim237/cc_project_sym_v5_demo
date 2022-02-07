@@ -1,0 +1,34 @@
+
+
+<!--================Courses Area =================-->
+<section class="cc-courses p_120">
+    <div class="container">
+        <div class="row cc-courses-inner">
+            <header class="section-header">
+                <h2 class="main-title">Lorem ipsum dolor sit amet, consectetur.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem earum molestiae pariatur
+                   suscipit vero. At ea hic illum impedit iste, minus natus nemo nostrum perspiciatis reiciendis
+                   repudiandae similique temporibus ullam.</p>
+            </header>
+            <div class="row">
+                {% for cour in cours %}
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="cc-courses-item">
+                            <img src="{{ cour.banner }}" alt="">
+                            <div class="hover_text">
+                                <a class="cc-btn cc-btn-outline mb-2" href="#">Gratuit</a>
+                                <a href="#"><h4>{{ cour.title }}</h4></a>
+                                <ul class="list d-flex">
+                                    <li><a href="#"><i class="fas fa-users"></i> 355</a></li>
+                                    <li><a href="#"><i class="fas fa-comment"></i> 35</a></li>
+                                    <li><a href="#"><i class="fas fa-user"></i> {{ cour.user.lastName }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Courses Area =================-->
