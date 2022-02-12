@@ -39,7 +39,7 @@
 	}
 	.packages-head{
 		margin-bottom: 1rem;
-		color: $mainFontColor;
+		color: $break-white;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 		h4 {
 			margin-top: 20px;
@@ -92,7 +92,7 @@
 			margin-bottom: -50px;
 			margin-top: 4rem;
 			font-size: 4rem;
-			color: $mainFontColor;
+			color: $break-white;
 			border: 1px solid transparentize($mainColor, .45);
 			border-radius: .25rem;
 			box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3) !important;

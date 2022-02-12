@@ -36,13 +36,59 @@
                                     <th scope="row">{{ post.id }}</th>
                                     <td>{{ post.title }}</td>
                                     <td>{{ post.author.fullName }}</td>
-                                    <td>{{ post.active }}</td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox"
+                                                   id="active" {{ post.active ? 'checked' : '' }}
+                                                   data-id="{{ post.id }}">
+                                            <label class="form-check-label" for="active"></label>
+                                        </div>
+                                    </td>
                                     <td>{{ post.createdAt | date("Y-m-d H:i") | format_datetime('medium', 'short', locale='fr') }}</td>
-                                    <td> 
-                                        <a href="{{ path('post_edit', {id: post.id}) }}" class="btn-admin"> <i
-                                                    class="far fa-edit"></i></a>
+                                    <td>
+                                        <a href="{{ path('post_edit', {id: post.id}) }}" class="btn-admin text-primary">
+                                            <i class="far fa-edit"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#deletePostModal"
+                                           data-id="{{ post.id }}" data-title="{{ post.title }}"
+                                           class="text-danger deleteBtn">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
                                     </td>
                                 </tr>
+
+                                {# Popup de suppression d'article #}
+                                <div class="modal fade" id="deletePostModal" data-bs-backdrop="static"
+                                     data-bs-keyboard="false" tabindex="-1"
+                                     aria-labelledby="deletePostModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content text-center">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title w-100 text-danger"
+                                                    id="deletePostModalLabel">Suppression!!!</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h6>id: {{ post.id }}</h6>
+                                                <h6>titre : {{ post.title }}</h6>
+                                                <h1 class="text-danger"><i class="fas fa-radiation"></i></h1>
+                                                <p class="fw-bold">
+                                                    Voulez-vous supprimer cet article? <br>
+                                                    <span class="text-danger">Cette action est irreversible!</span>
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary btn-sm rounded-0"
+                                                        data-bs-dismiss="modal">
+                                                    Annuler
+                                                </button>
+                                                <a href="#" type="button" class="cc-btn cc-btn-red cc-btn-mini">
+                                                    Confirmer
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             {% endfor %}
                         </tbody>
                     </table>
@@ -53,4 +99,35 @@
             </div>
         </div>
     </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.onload = () => {
+            let activateButtons = document.querySelectorAll('input[type=checkbox]');
+            activateButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    let request = new XMLHttpRequest();
+                    request.open('get', `post/activate/${this.dataset.id}`);
+                    request.send();
+
+                    request.onreadystatechange = () => {
+                        if (request.readyState === 4 && request.status === 200) {
+                            let response = request.responseText;
+
+                            console.log(response);
+                        }
+                    }
+                })
+            })
+
+            let deleteButtons = document.querySelectorAll('.deleteBtn');
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    document.querySelector('.modal-footer a').href = `post/delete/${this.dataset.id}`;
+                })
+            })
+        }
+    </script>
 {% endblock %}

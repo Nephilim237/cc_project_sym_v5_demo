@@ -17,7 +17,7 @@
 		}
 		&:before{
 			content: "";
-			background: transparentize($mainFontColor, .65);
+			background: transparentize($break-white, .65);
 			position: absolute;
 			left: 0;
 			top: 0;

@@ -273,8 +273,6 @@ ul, ol, li, dl {
 .cc-btn {
   display: inline-block;
   padding: .5rem 1rem;
-  background-color: #ffa400;
-  color: #fff;
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
@@ -285,13 +283,8 @@ ul, ol, li, dl {
   text-decoration: none;
   transition: all .3S ease;
 }
-.cc-btn:hover, .cc-btn:focus {
-  outline: none;
-  background-color: #db8d00;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
-}
 .cc-btn.cc-btn-mini {
-  font-size: 1rem;
+  font-size: 1em;
   padding: .25rem .5rem;
 }
 .cc-btn.cc-btn-big {
@@ -302,6 +295,26 @@ ul, ol, li, dl {
   border-color: #ffa400;
   color: #ffa400;
   box-shadow: none;
+}
+
+.cc-btn-orange {
+  background-color: #ffa400;
+  color: #fff;
+}
+.cc-btn-orange:hover, .cc-btn-orange.hover, .cc-btn-orange:active, .cc-btn-orange.active, .cc-btn-orange.focus, .cc-btn-orange:focus {
+  outline: none;
+  background-color: #db8d00;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cc-btn-red {
+  background-color: #db1414;
+  color: #fff;
+}
+.cc-btn-red:hover, .cc-btn-red.hover, .cc-btn-red:active, .cc-btn-red.active, .cc-btn-red.focus, .cc-btn-red:focus {
+  outline: none;
+  background-color: #ba1111;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 .blog-pagination {
@@ -1182,3 +1195,5 @@ ul, ol, li, dl {
   color: #ffa400;
   text-align: center;
 }
+
+/*# sourceMappingURL=codingcity.css.map */

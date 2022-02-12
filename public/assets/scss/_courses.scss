@@ -49,7 +49,7 @@
 		padding-right: 35px;
 		h4{
 			font-size: 18px;
-			color: $mainFontColor;
+			color: $break-white;
 			margin-bottom: 15px;
 			@include transition;
 			text-shadow: 1px 1px 3px #000;
@@ -58,7 +58,7 @@
 			li{
 				//margin-right: 16px;
 				a{
-					color: $mainFontColor;
+					color: $break-white;
 					font-size: 14px;
 					font-family: $rob;
 					i{

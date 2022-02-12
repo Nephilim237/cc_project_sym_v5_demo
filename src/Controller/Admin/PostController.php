@@ -6,7 +6,9 @@ use App\Entity\Post;
 use App\Form\PostFormType;
 use App\Repository\PostRepository;
 use phpDocumentor\Reflection\Types\This;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -86,5 +88,37 @@ class PostController extends AbstractController
             'postForm' => $form->createView(),
         ]);
 
+    }
+
+    /**
+     * @Route("admin/post/activate/{id}", "activate_post")
+     * @param Post $post
+     *
+     * @return Response
+     */
+    public function activate(Post $post) {
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', null, 'Accès non autorisé');
+        $post->setActive($post->getActive() ? false : true);
+        $manager = $this->getDoctrine()->getManager();
+        $manager->persist($post);
+        $manager->flush();
+
+        return new Response('true');
+    }
+
+    /**
+     * @Route("admin/post/delete/{id}", "delete_post")
+     * @param Post $post
+     *
+     * @return RedirectResponse
+     */
+    public function delete(Post $post)
+    {
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN', null, 'Accès non autorisé');
+        $manager = $this->getDoctrine()->getManager();
+        $manager->remove($post);
+        $manager->flush();
+        $this->addFlash('success', 'Article supprimé avec succès.');
+        return $this->redirectToRoute('post_home');
     }
 }

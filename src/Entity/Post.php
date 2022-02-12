@@ -58,6 +58,11 @@ class Post
      */
     private $category;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $banner;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
@@ -146,6 +151,18 @@ class Post
     public function removeCategory(Category $category): self
     {
         $this->category->removeElement($category);
+
+        return $this;
+    }
+
+    public function getBanner(): ?string
+    {
+        return $this->banner;
+    }
+
+    public function setBanner(string $banner): self
+    {
+        $this->banner = $banner;
 
         return $this;
     }
