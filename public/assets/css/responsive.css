@@ -1,0 +1,393 @@
+@media (max-width:1619px){
+	/* Main Menu Area css
+	============================================================================================ */
+   .cc-header .navbar .search {
+		margin-left: 40px;
+	}
+	/* End Main Menu Area css
+	============================================================================================ */
+	.testimonials_area .owl-prev, .testimonials_area .owl-next {
+		right: 15px;
+	}
+}
+@media (max-width:1300px){
+	.testimonials_area .owl-prev, .testimonials_area .owl-next {
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 25px;
+		top: auto;
+	}
+	.testimonials_area .owl-prev{
+		transform: rotate(90deg);
+	}
+	.testimonials_area .owl-next{
+		transform: rotate(90deg);
+		margin-left: -40px;
+	}
+}
+@media (max-width:1199px){
+	/* Main Menu Area css
+	============================================================================================ */
+	.cc-header .navbar .nav .nav-item {
+		margin-right: 28px;
+	}
+	/* End Main Menu Area css
+	============================================================================================ */
+	/* Home Banner Area css
+	============================================================================================ */
+	.cc-banner {
+		min-height: 700px;
+	}
+	.cc-banner .cc-banner-wrapper {
+		min-height: 700px;
+	}
+	/* End Home Banner Area css
+	============================================================================================ */
+}
+
+@media (max-width:991px){
+	/* Main Menu Area css
+	============================================================================================ */
+    .navbar-toggler {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        cursor: pointer;
+        margin-top: 27px;
+        margin-bottom: 23px;
+    }
+	.cc-header .navbar {
+		background: #fff;
+	}
+    .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
+		opacity: 1;
+	}
+	.navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+		opacity: 0;
+	}
+	.navbar-toggler[aria-expanded="true"] span:first-child {
+		transform: rotate(-45deg);
+		position: relative;
+		top: 8px;
+	}
+	.navbar-toggler[aria-expanded="true"] span:last-child {
+		transform: rotate(45deg);
+		bottom: 6px;
+		position: relative;
+	}
+	.navbar-toggler span{
+		display: block;
+		width: 25px;
+		height: 3px;
+		background: #ffa400;
+		margin: auto auto 4px;
+		transition: all 400ms linear;
+		cursor: pointer;
+	}
+    .navbar .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .nav{
+        padding: 0 0;
+    }
+    .header_top .nav{
+        padding: 0;
+    }
+    .cc-header .navbar .nav .nav-item .nav-link{
+        line-height: 40px;
+        margin-right: 0;
+        display: block;
+		border-bottom: 1px solid #ededed33;
+		border-radius: 0;
+    }
+	.cc-header.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
+		line-height: 40px;
+	}
+    .cc-header .navbar .search{
+        margin-left: 0;
+    }
+	.cc-header .navbar-collapse{
+		max-height: 340px;
+		overflow-y: scroll;
+	}
+	.cc-header .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
+		padding: 0 15px;
+	}
+	.cc-header .navbar .nav .nav-item {
+		margin-right: 0;
+	}
+	/* End Main Menu Area css
+	============================================================================================ */
+	/* Blog page Area css
+	============================================================================================ */
+	.category-post img{
+        width: 100%;
+    }
+	.category-post {
+		max-width: 360px;
+		margin: 0 auto;
+	}
+	.nn-blog-category .col-lg-4{
+        margin-top: 30px;
+    }
+    .nn-blog-area{
+        padding-bottom: 80px;
+    }
+    .single-post-area .blog_right_sidebar{
+        margin-top: 30px;
+    }
+	/* End Blog page Area css
+	============================================================================================ */
+	
+	/* Contact Page Area css
+	============================================================================================ */
+	.contact_info{
+		margin-bottom: 50px;
+	}
+	/* End Contact page Area css
+	============================================================================================ */
+	.cc-banner .donation_inner{
+		margin-bottom: -30px;
+	}
+	.cc-banner .dontation_item{
+		max-width: 350px;
+		margin: auto;
+	}
+	/* Footer Area css
+	============================================================================================ */
+	.footer-area .col-sm-6{
+		margin-bottom: 30px;
+	}
+	/* End End Footer Area css
+	============================================================================================ */
+	.cc-headings-item{
+		margin-bottom: 30px;
+	}
+	.cc-headings-inner{
+		margin-bottom: -30px;
+	}
+	.packages-text{
+		margin-bottom: 50px;
+	}
+	.packages-item{
+		max-width: 80%;
+		margin: 0 auto 30px;
+	}
+	.packages-inner{
+		margin-bottom: -30px;
+	}
+	.packages-wrapper {
+		max-width: 85%;
+		margin: 0 auto;
+	}
+	.post-item img{
+		width: 100%;
+	}
+	.nn-newsletter {
+		padding-left: 0;
+	}
+	.cc-footer .cc-footer-bloc {
+		margin-bottom: 2.5rem;
+	}
+	.cc-footer .cc-footer-title{
+	    border-bottom: 1px solid #ffa400;
+	}
+	.video_area{
+		margin-top: 40px;
+		float: none;
+		display: block;
+	}
+	.video_area > img{
+		width: 100%;
+	}
+	.c_details_list{
+		margin-top: 30px;
+	}
+}
+@media (max-width:767px){
+	.cc-banner {
+		min-height: 500px;
+	}
+	.cc-banner .cc-banner-wrapper {
+		min-height: 500px;
+	}
+	.cc-banner .cc-banner-wrapper .cc-banner-content {
+		margin-top: 0;
+	}
+	/* Blog Page Area css
+	============================================================================================ */
+    .blog_banner .cc-banner-wrapper .blog_b_text h2 {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.blog_info.text-right{
+		text-align: left !important;
+		margin-bottom: 10px;
+	}
+	/* End Blog Page Area css
+	============================================================================================ */
+	.cc-banner .cc-banner-wrapper .cc-banner-content h3 {
+		font-size: 30px;
+	}
+	.cc-banner .cc-banner-wrapper .cc-banner-content p br {
+		display: none;
+	}
+	.cc-banner .cc-banner-wrapper .cc-banner-content h3 span {
+		line-height: 45px;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+	/* Footer Area css
+	============================================================================================ */
+	.footer-bottom{
+		text-align: center;
+	}
+	.footer-bottom .footer-social {
+		text-align: center;
+		margin-top: 15px;
+	}
+	/* End End Footer Area css
+	============================================================================================ */
+	.wd55 {
+		width: 100%;
+	}
+	.cc-courses-inner .cc-courses-item img{
+		width: 100%;
+	}
+	.wd44 {
+		width: 100%;
+	}
+	.cc-course-item img{
+		width: 100%;
+	}
+	
+}
+@media (max-width:600px){
+	.builder_inner .builder_item {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+@media (max-width:575px){
+	.top_menu {
+		display: none;
+	}
+	.cc-header + section, .cc-header + row, .cc-header + div {
+		margin-top: 71px;
+	}
+    /* Home Banner Area css
+	============================================================================================ */
+	.cc-banner .cc-banner-wrapper .cc-banner-content h2 {
+		font-size: 28px;
+	}
+	.cc-banner {
+		min-height: 500px;
+	}
+	.cc-banner .cc-banner-wrapper {
+		min-height: 500px;
+	}
+	.blog_banner .cc-banner-wrapper .blog_b_text {
+		margin-top: 0;
+	}
+	.cc-banner .cc-banner-wrapper .cc-banner-content img{
+		display: none;
+	}
+	.cc-banner .cc-banner-wrapper .cc-banner-content h5 {
+		margin-top: 0;
+	}
+	/* End Home Banner Area css
+	============================================================================================ */
+	.p_120 {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	.main_title h2 {
+		font-size: 25px;
+	}
+	/* Elements Area css
+	============================================================================================ */
+	.sample-text-area {
+		padding: 70px 0 70px 0;
+	}
+	.generic-blockquote {
+		padding: 30px 15px 30px 30px;
+	}
+	/* End Elements Area css
+	============================================================================================ */
+	
+	/* Blog Page Area css
+	============================================================================================ */
+	.blog-details h2 {
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.blog_banner .cc-banner-wrapper .blog_b_text h2 {
+		font-size: 28px;
+		line-height: 38px;
+	}
+	/* End Blog Page Area css
+	============================================================================================ */
+	/* Footer Area css
+	============================================================================================ */
+	.footer-area {
+		padding: 70px 0;
+	}
+	/* End End Footer Area css
+	============================================================================================ */
+	.pad_top {
+		padding-top: 70px;
+	}
+	.footer-bottom {
+		padding-top: 20px;
+	}
+}
+
+@media (max-width:480px){
+	/* Main Menu Area css
+	============================================================================================ */
+	.cc-header .navbar-collapse{
+		max-height: 250px;
+	}
+	/* End Main Menu Area css
+	============================================================================================ */
+	
+	/* Home Banner Area css
+	============================================================================================ */
+    .cc-banner .cc-banner-wrapper .cc-banner-content {
+		padding: 30px 15px;
+		margin-top: 0;
+	}
+	.cc-banner-content .white_btn {
+		display: block;
+	}
+	.cc-banner .cc-banner-wrapper .cc-banner-content h3 {
+		font-size: 24px;
+	}
+	/* End Home Banner Area css
+	============================================================================================ */
+	.cc-common-banner .cc-banner-wrapper .cc-banner-content h2 {
+		font-size: 32px;
+	}
+	.cc-banner {
+		min-height: 400px;
+	}
+	.cc-banner .cc-banner-wrapper {
+		min-height: 400px;
+	}
+	/* Blog Page Area css
+	============================================================================================ */
+	.comments-area .thumb {
+		margin-right: 10px;
+	}
+	
+	/* End Blog Page Area css
+	============================================================================================ */
+	.video_area .popup-youtube img {
+		width: 15%;
+	}
+	.course_details_inner .nav.nav-tabs li {
+		margin-right: 15px;
+	}
+}

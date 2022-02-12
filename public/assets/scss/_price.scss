@@ -1,0 +1,144 @@
+/* Begin Packages css
+============================================================================================ */
+.packages-inner{
+	.col-lg-4{
+		vertical-align: middle;
+		// align-self: center;
+	}
+	.packages-wrapper {
+		background: linear-gradient(180deg, $secondaryColor 100px, transparent 300px) no-repeat;
+		margin-bottom: 4rem;
+        border: 1px solid transparentize($mainColor, .85) ;
+        border-radius: 4px;
+	}
+}
+.packages-text{
+	margin-bottom: 1rem;
+	h3{
+		color: $darkFontColor;
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+	p{
+		margin-bottom: 0;
+		font-size: 1rem;
+	}
+}
+.packages-item{
+	// background: #fff;
+	border-radius: 5px;
+	text-align: center;
+	padding: 30px 20px;
+
+	h4{
+		//font-family: $rob;
+		//font-size: 24px;
+		font-weight: normal;
+		margin-top: 40px;
+		margin-bottom: 0;
+	}
+	.packages-head{
+		margin-bottom: 1rem;
+		color: $mainFontColor;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+		h4 {
+			margin-top: 20px;
+		}
+		i{
+			height: 5rem;
+			width: 5rem;
+			display: block;
+			border-radius: 50%;
+			margin: 0 auto 25px;
+			font-size: 4rem;
+			// color: $mainColor;
+			line-height: 1.5;
+			@include transition;
+		}
+		h3{
+			font-size: 1.5rem;
+			margin-top: .5rem;
+			margin-bottom: 12px;
+		}
+		p{
+			font-size: 1.1rem;
+			margin-bottom: 25px;
+		}
+	}
+	.packages-body{
+		font-size: 1rem;
+		.list{
+			li{
+				a{
+					color: $pfont;
+					line-height: 50px;
+					border-bottom: 1px solid transparentize($secondaryColor, .85);
+					display: block;
+				}
+				&:first-child{
+					a{
+						border-top: 1px solid transparentize($mainColor, .75);
+					}
+				}
+			}
+		}
+	}
+	
+	.packages-footer{
+		position: relative;
+		i{
+			background: $darkFontColor;
+			display: block;
+			margin-bottom: -50px;
+			margin-top: 4rem;
+			font-size: 4rem;
+			color: $mainFontColor;
+			border: 1px solid transparentize($mainColor, .45);
+			border-radius: .25rem;
+			box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3) !important;
+			@include transition;
+		}
+		h4 {
+			color: $darkFontColor;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+		}
+		.main_btn{
+			position: absolute;
+			bottom: 0;
+			padding: .75rem 3rem;
+			width: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 1.1rem;
+			box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3) !important;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			opacity: 0;
+		}
+		&:hover{
+			i {
+				opacity: 0;
+			}
+			h4{
+				opacity: 0;
+			}
+			.main_btn{
+				background: #fff;
+				opacity: 1;
+			}
+		}
+	}
+	&:hover{
+		.packages-head{
+		}
+		.packages-footer{
+			h4{
+				opacity: 0;
+			}
+			.main_btn{
+				opacity: 1;
+			}
+		}
+	}
+}
+/* End Packages css
+============================================================================================ */

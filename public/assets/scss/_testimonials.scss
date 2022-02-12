@@ -1,0 +1,104 @@
+/* Start Opinions css
+============================================================================================ */
+.cc-rates{
+	position: relative;
+	background: linear-gradient(to bottom, rgba($black, .35), rgba($black, .15)), url("../img/rates/technology-785742_1920.jpg") center center no-repeat;
+	
+}
+.cc-rates-slider{
+	//max-width: 945px;
+	//margin: auto;
+
+	.owl-dots {
+        display: block;
+		padding-top: 2rem;
+
+		.owl-dot span{
+			background: $mainColor;
+			width: 20px;
+			height: 20px;
+			transform: translate3d(0, -50%, 0) scale(.4);
+			transform-origin: 50% 50% 0;
+			transition: all .3s ease-in-out 0s;
+		}
+
+		.owl-dot:hover span, .owl-dot.active span {
+			background: lighten($mainColor, 10%);
+			transform: translate3d(0, -50%, 0) scale(.7);
+		}
+	}
+
+	.item {
+		max-width: 420px;
+
+	}
+
+	.owl-item {
+		.item{
+			opacity: .5;
+			transform: scale3d(.8, .8, 1);
+			transition: .3s ease-in-out;
+		}
+
+		&.active.center {
+			.item {
+				opacity: 1;
+				transform: scale3d(1, 1, 1);
+				-webkit-mask-image: none;
+				mask-image: none;
+			}
+		}
+
+		img {
+			transform-style: preserve-3d;
+		}
+	}
+
+	.cc-rates-item{
+		text-align: center;
+		//border-radius: 4px;
+	}
+	.owl-dots{
+		.owl-dot{
+			transition: transform .3s ease-in-out;
+			&:hover {
+				transform: scale3d(1.1, 1.1, 1.1);
+			}
+		}
+	}
+}
+.cc-rates-item{
+	.raterInfo {
+		padding-bottom: 2rem;
+		h5.raterName{
+			color: $mainColor;
+			font-size: 14px;
+			margin: 15px 0 10px;
+			font-weight: 300;
+			font-family: $piazzo;
+		}
+
+		img.raterImage {
+			width: 30px;
+			border-radius: 2px;
+		}
+	}
+	.starRating{
+		padding-top: 2rem;
+		li{
+			a{
+				color: #ffc000;
+				font-size: 14px;
+			}
+		}
+	}
+	p{
+		max-width: 760px;
+		margin: auto auto 1rem;
+		text-align: center;
+		padding: 0 1rem;
+		color: $darkFontColor;
+	}
+}
+/* End Opinions css
+============================================================================================ */

@@ -1,0 +1,204 @@
+/* Courses Area css
+============================================================================================ */
+.cc-courses{
+	overflow: hidden;
+}
+.cc-courses-inner{
+	overflow: hidden;
+	.cc-courses-item{
+		position: relative;
+		overflow: hidden;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0, 0.65);
+		}
+
+		img {
+			max-height: 200px;
+			width: 100%;
+		}
+	}
+	.cc-course-item{
+		position: relative;
+		max-height: 450px;
+		overflow: hidden;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0, 0.65);
+		}
+		.hover_text{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	.hover_text{
+		position: absolute;
+		left: 0;
+		bottom: 15px;
+		padding-left: 35px;
+		padding-right: 35px;
+		h4{
+			font-size: 18px;
+			color: $mainFontColor;
+			margin-bottom: 15px;
+			@include transition;
+			text-shadow: 1px 1px 3px #000;
+		}
+		.list{
+			li{
+				//margin-right: 16px;
+				a{
+					color: $mainFontColor;
+					font-size: 14px;
+					font-family: $rob;
+					i{
+						padding-right: 6px;
+					}
+
+					&:hover {
+						color: $mainColor;
+					}
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+		&:hover{
+			h4{
+				color: $mainColor;
+			}
+
+			.cat {
+				background: darken($mainColor, 5%);
+			}
+		}
+	}
+}
+/* End Courses Area css
+============================================================================================ */
+
+/* Course Details Area css
+============================================================================================ */
+.course_details_area{
+	
+}
+.course_details_inner{
+	.nav.nav-tabs{
+		border: none;
+		margin-top: 30px;
+		li{
+			margin: 0 0 0 0;
+
+			a{
+				border: none;
+				padding: 1rem 1.5rem;
+				margin-bottom: 0;
+				line-height: 2;
+				font-size: 1rem;
+				font-family: $rob;
+				color: $font-color;
+				border-bottom: 1px solid transparent;
+				border-radius: 0;
+				&.active, &:hover {
+					border-color: $mainColor;
+					background-color: rgba(#000, .1);
+				}
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	.tab-content{
+		background: #f9f9ff;
+		.comments-area{
+			margin-top: 0;
+			border-bottom: 0;
+		}
+		.comment-form{
+			margin-top: 0;
+			margin-bottom: 0;
+			border-top: 0;
+			.submit_btn{
+				line-height: 40px;
+				border-radius: 5px;
+			}
+		}
+		.objctive_text{
+			padding: 25px;
+			border: 1px solid #eeeeee;
+			font-size: 1rem;
+			.list{
+				padding-top: 15px;
+				padding-bottom: 15px;
+				li{
+					margin-bottom: .5rem;
+					a{
+						display: block;
+						width: 100%;
+						padding: .5rem;
+						color: $pfont;
+						font-family: $rob;
+						font-size: 1rem;
+						@include transition;
+						&:hover{
+							color: $mainColor;
+						}
+					}
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.course-duration {
+				float: right;
+			}
+		}
+	}
+}
+
+.c_details_list{
+	.list{
+		li{
+			margin-bottom: 10px;
+			a{
+				background: #f9f9ff;
+				display: block;
+				line-height: 40px;
+				padding: 0 18px;
+				font-size: 14px;
+				font-family: $rob;
+				color: $pfont;
+				span{
+					float: right;
+				}
+			}
+			&:first-child{
+				a{
+					span{
+						color: $mainColor;
+					}
+				}
+			}
+		}
+	}
+	.main_btn{
+		display: block;
+		border-radius: none;
+	}
+}
+
+/* End Course Details Area css
+============================================================================================ */

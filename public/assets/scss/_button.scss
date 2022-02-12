@@ -1,0 +1,109 @@
+/* Main Button Area css
+============================================================================================ */
+.main_btn{
+	display: inline-block;
+	background: $mainColor;
+	padding: 0px 40px;
+	color: #fff;
+	font-family: $rob;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 48px;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid $mainColor;
+	cursor: pointer;
+	border-radius: .25rem;
+	@include transition;
+	&:hover{
+		background: transparent;
+		color: $mainColor;
+	}
+}
+.main_btn2{
+	display: inline-block;
+	background: #fff;
+	padding: 0px 32px;
+	color: $font-color;
+	font-family: $rob;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 48px;
+	border-radius: 5px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid #fff;
+	cursor: pointer;
+	@include transition;
+	&:hover{
+		background: $mainColor;
+		color: #fff;
+		border-color: $mainColor;
+	}
+}
+.submit_btn{
+	width: auto;
+	display: inline-block;
+	background: $mainColor;
+	padding: 0px 50px;
+	color: #fff;
+	font-family: $rob;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 50px;
+	border-radius: 5px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid $mainColor;
+	cursor: pointer;
+	@include transition;
+	&:hover{
+		background: transparent;
+		color: $mainColor;
+	}
+}
+
+.white_bg_btn{
+	display: inline-block;
+	background: $mainColor;
+	padding: 0px 35px;
+	color: $mainFontColor;
+	font-family: $ubuntu;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 34px;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid #eeeeee;
+	cursor: pointer;
+	@include transition;
+	&:hover{
+		background: $mainFontColor;
+		color: $mainColor;
+		border-color: #eeeeee;
+	}
+}
+.black_btn{
+	padding: 0px 44px;
+	line-height: 50px;
+	background: $font-color;
+	color: $mainColor;
+	display: inline-block;
+	border-radius: 5px;
+	font-size: 13px;
+	font-family: $rob;
+	font-weight: 500;
+	@include transition;
+	&:hover{
+		background: $mainColor;
+		color: $font-color;
+	}
+}
+/* End Main Button Area css
+============================================================================================ */

@@ -1,0 +1,41 @@
+.top_menu{
+  background: $mainColor;
+  .header_social{
+    li{
+      a{
+        color: $mainFontColor;
+        font-size: 1.15rem;
+        padding: .5rem;
+        @include transition;
+
+        &:hover {
+          background-color: $mainFontColor;
+        }
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover{
+        a{
+          color: $mainColor;
+        }
+      }
+    }
+  }
+  .dn_btn{
+    line-height: 42px;
+    font-size: 12px;
+    font-family: $rob;
+    font-weight: normal;
+    color: $mainFontColor;
+    padding: 0 .5rem;
+    @include transition;
+    &:hover{
+      background-color: $mainFontColor;
+      color: $mainColor;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

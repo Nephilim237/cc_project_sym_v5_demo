@@ -1,0 +1,94 @@
+/* Team Area css
+============================================================================================ */
+.nn-team{
+	background: #f9f9ff;
+}
+.nn-team-wrapper{
+	margin-bottom: -30px;
+}
+.nn-team-item{
+
+	div[class^='col'] {
+		padding: 0;
+	}
+	.nn-team-img{
+		img{
+			width: 100%;
+		}
+		&:before{
+			content: "";
+			background: transparentize($mainFontColor, .65);
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: all 300ms ease;
+			border-radius: 50%;
+		}
+		.hover{
+			position: absolute;
+			left: 0;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			opacity: 0;
+			@include transition;
+			a{
+				font-size: 14px;
+				color: $mainColor;
+				margin-right: 20px;
+				@include transition;
+				&:last-child{
+					margin-right: 0;
+				}
+				&:hover{
+					color: darken($mainColor, 6%);
+				}
+			}
+		}
+	}
+	.nn-team-name{
+		text-align: center;
+	    margin: 0;
+	    display: flex;
+	    flex-wrap: wrap;
+	    flex-flow: column;
+	    align-items: center;
+	    justify-content: center;
+	    height: 100%;
+		h4{
+			margin-bottom: 5px;
+			color: $darkFontColor;
+			font-family: $piazzo;
+			font-weight: bold;
+			font-size: 1.2rem;
+			@include transition;
+		}
+		p{
+			font-size: 1rem;
+			font-family: $rob;
+			color: $pfont;
+			margin-bottom: 0;
+		}
+	}
+	&:hover{
+		.nn-team-img{
+			&:before{
+				opacity: 1;
+			}
+			.hover{
+				opacity: 1;
+			}
+		}
+		.nn-team-name{
+			h4{
+				color: $mainColor;
+			}
+		}
+	}
+}
+/* End Team Area css
+============================================================================================ */

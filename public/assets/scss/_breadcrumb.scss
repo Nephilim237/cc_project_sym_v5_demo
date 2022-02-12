@@ -1,0 +1,165 @@
+/* Home Banner Area css */
+.cc-banner{
+	position: relative;
+	z-index: 1;
+	min-height: 780px;
+	.cc-banner-wrapper{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		min-height: 780px;
+		.overlay{
+			background: linear-gradient(to bottom, rgba(#000, .5) 35%, rgba(#fff, .35) 85%), url(../img/banner/main-banner.jpg) no-repeat scroll center center;
+			background-size: cover;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 121%;
+			bottom: 0;
+			z-index: -1;
+		}
+		.cc-banner-content{
+			color: $mainFontColor;
+			h2{
+				color: $mainFontColor;
+				font-size: 48px;
+				font-weight: 500;
+				margin-bottom: 15px;
+			}
+			p{
+				font-size: 1.1rem;
+				line-height: 1.5;
+				font-family: $ubuntu;
+				font-weight: normal;
+				max-width: 620px;
+				margin: auto;
+			}
+			.main_btn{
+				margin-top: 40px;
+				border-radius: 0;
+			}
+		}
+	}	
+	
+}
+
+.blog_banner{
+	min-height: 660px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	margin-bottom: 0;
+	.cc-banner-wrapper{
+		background: #04091e;
+		position: relative; 
+		overflow: hidden;
+		width: 100%;
+		min-height: 660px;
+		z-index: 1;
+		.overlay{
+			background: url(../img/banner/machine-learning-1.jpeg) no-repeat scroll center center;
+			background-size: cover;
+			opacity: .5;
+			height: 125%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+		.blog_b_text{
+			max-width: 700px;
+			margin: auto;
+			color: $mainFontColor;
+			text-shadow: 2px 2px 4px rgba($mainColor, 1);
+			h2{
+				font-size: 60px;
+				font-weight: 700;
+				font-family: $ubuntu;
+				margin-bottom: 15px;
+			}
+			p{
+				font-size: 1.25rem;
+				margin-bottom: 35px;
+			}
+			.white_bg_btn{
+				line-height: 42px;
+				padding: 0 45px;
+			}
+
+			.main_btn {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+.banner_box{
+	max-width: 1620px;
+	margin: auto;
+}
+.cc-common-banner{
+	position: relative;
+	z-index: 1;
+	min-height: 300px;
+	.cc-banner-wrapper{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		min-height: 300px;
+		background: #04091e;
+		z-index: 1;
+		.overlay{
+			background: url(../img/banner/course-banner.jpg) no-repeat scroll center center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 125%;
+			bottom: 0;
+			z-index: -1;
+			opacity: .6;
+		}
+		.cc-banner-content{
+			h2{
+				color: $mainFontColor;
+				font-size: 48px;
+				font-family: $ubuntu;
+				margin-bottom: 0;
+				font-weight: 500;
+			}
+			.page_link{
+				a{
+					font-size: 1rem;
+					color: $mainFontColor;
+					font-family: $ubuntu;
+					margin-right: 32px;
+					position: relative;
+					&:before{
+						content: "\e87a";
+						font-family: 'Linearicons-Free';
+						position: absolute;
+						right: -25px;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+					&:last-child{
+						margin-right: 0;
+						&:before{
+							display: none;
+						}	
+					}
+					&:hover{
+						color: $mainColor;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* End Home Banner Area css
+============================================================================================ */

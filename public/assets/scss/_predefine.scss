@@ -1,0 +1,86 @@
+.list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration:none;
+    transition: all 0.3s ease-in-out;
+    &:hover, &:focus{
+       text-decoration:none;
+       outline: none;
+    }
+}
+
+body{
+    line-height: 24px;
+    font-size: 14px;
+    font-family: $rob;
+    font-weight: normal;
+    color: $pfont;
+}
+h1, h2, h3, h4, h5, h6{ 
+    font-family: $ubuntu; 
+    font-weight: bold;
+}
+
+button:focus{
+    outline: none;
+	box-shadow: none;
+}
+.p_120{
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+.pad_top{
+	padding-top: 120px;
+}
+.mt-25{
+	margin-top: 25px;
+}
+.container{
+    @media(min-width:1200px){
+        max-width: 1170px;
+    }
+}
+@media(min-width: 1620px){
+	.box_1620{
+		max-width: 1650px;
+		margin: auto;
+	}
+}
+
+
+/* Main Title Area css
+============================================================================================ */
+.main_title{
+	text-align: center;
+	max-width: 680px;
+	margin: 0 auto 75px;
+	h2{
+		font-family: $ubuntu;
+		font-size: 2rem;
+		color: $darkFontColor;
+		margin-bottom: 12px;
+	}
+	p{
+		font-size: 1rem;
+		font-family: $rob;
+		font-weight: normal;
+		line-height: 24px;
+		color: $pfont;
+		margin-bottom: 0;
+	}
+}
+
+/* End Main Title Area css
+============================================================================================ */
+
+
+/* ======= Start icon predefined styling ======= */
+i {
+	padding: .25rem;
+}
+
+

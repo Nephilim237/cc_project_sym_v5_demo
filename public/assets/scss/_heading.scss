@@ -1,0 +1,66 @@
+/* Finance Area css
+============================================================================================ */
+@media (min-width: $xs) {
+	.cc-headings-inner{
+		div:nth-child(2n) .cc-headings-item {
+			border-right: none;
+		}
+	}
+}
+.cc-headings-item{
+	border-right: 1px solid transparentize($mainColor, .65);
+	.media{
+		padding: 1rem 0;
+		.media-icon{
+			vertical-align: middle;
+			align-self: center;
+			padding-right: 25px;
+			i{
+				font-size: 36px;
+				color: $mainColor;
+			}
+		}
+		.media-body{
+			h5{
+				color: $mainFontColor;
+				font-size: 16px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+/* End Finance Area css
+============================================================================================ */
+
+/* Begin Become Instuctor css
+============================================================================================ */
+.impress_area{
+	background: linear-gradient(180deg, $secondaryColor, transparent), url(../img/MCCover.png) no-repeat scroll center center;
+    background-size: contain;
+	.impress_inner{
+		color: #fff;
+		text-shadow: 2px 2px 5px rgba($mainColor, 0.5);
+		h2{
+			text-transform: uppercase;
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+		p{
+			max-width: 770px;
+			margin: 0 auto 45px;
+			font-size: 1rem;
+		}
+
+		.main_btn2 {
+			font-size: 1rem;
+			color: $mainColor;
+			border-radius: 0;
+
+			//&:hover {
+			//	color: #fff;
+			//}
+		}
+	}
+}
+/* End Looking Area css
+============================================================================================ */

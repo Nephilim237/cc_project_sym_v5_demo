@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+$piazzo: "Piazzolla", serif;
+$sourcePro: 'Source Sans Pro', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
+
+$mainColor: #ffa400;
+$secondaryColor: #495454;;
+$mainFontColor: #eaf6ff;
+$darkFontColor: #212529;
+$font-color: #222222;
+$pfont: #777777;
+$white: #ffffff;
+$black: #000000;
+
+$main-color: #ffa400;
+$font-color: #495454;
+$blue-color: #00dafd;
+$sec-color: #7a7b7b;
+$white: #fff;
+$break-white: #eaf6ff;
+$black: #000;
+
+//media queries variables
+$xs: 572px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+// Mixins
+@mixin transition($property: all, $duration: .3s, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+
+
+
