@@ -7,6 +7,7 @@ use App\Entity\Post;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -35,9 +36,17 @@ class PostFormType extends AbstractType
                 ],
                 'label'     =>  'Catégorie',
                 'attr'      =>  [
-                    'class'     =>      'form-select'
+                    'class'     =>      'form-select h-auto'
                 ],
                 'multiple' => true,
+            ])
+            ->add('images', FileType::class, [
+                'label'         =>  'Illustration: ',
+                'label_attr'    =>  ['class'    => 'form-label'],
+                'multiple'      =>  true,
+                'required'      =>  false,
+                'mapped'        =>  false,
+                'attr'          =>  ['class'    => 'form-control']
             ])
         ;
     }

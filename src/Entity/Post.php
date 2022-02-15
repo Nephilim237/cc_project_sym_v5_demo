@@ -59,13 +59,14 @@ class Post
     private $category;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="post", orphanRemoval=true, cascade={"persist"})
      */
-    private $banner;
+    private $images;
 
     public function __construct()
     {
         $this->category = new ArrayCollection();
+        $this->images = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -155,14 +156,32 @@ class Post
         return $this;
     }
 
-    public function getBanner(): ?string
+    /**
+     * @return Collection|Image[]
+     */
+    public function getImages(): Collection
     {
-        return $this->banner;
+        return $this->images;
     }
 
-    public function setBanner(string $banner): self
+    public function addImage(Image $image): self
     {
-        $this->banner = $banner;
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setPost($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Image $image): self
+    {
+        if ($this->images->removeElement($image)) {
+            // set the owning side to null (unless already changed)
+            if ($image->getPost() === $this) {
+                $image->setPost(null);
+            }
+        }
 
         return $this;
     }
