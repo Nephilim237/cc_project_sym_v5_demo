@@ -4,7 +4,7 @@ $piazzo: "Piazzolla", serif;
 $sourcePro: 'Source Sans Pro', sans-serif;
 $ubuntu: 'Ubuntu', sans-serif;
 
-$mainColor: #ffa400;
+$main-color: #ffa400;
 $secondaryColor: #495454;
 $darkFontColor: #212529;
 $pfont: #777777;
@@ -30,7 +30,6 @@ $lg: 1200px;
 }
 
 // Placeholder Mixins
-
 @mixin placeholder {
   &.placeholder { @content; }
   &:-moz-placeholder { @content; }

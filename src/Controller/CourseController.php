@@ -23,7 +23,7 @@ class CourseController extends AbstractController
     {
         $page = (int)$request->query->get('page', 1);
         $limit = 36;
-        $courses = $courRepository->getPainatedCourses($page, $limit);
+        $courses = $courRepository->getPaginatedCourses($page, $limit);
         $activeCourses = count($courRepository->findAll());
         $totalPages = ceil($activeCourses / $limit);
         return $this->render('course/index.html.twig', [

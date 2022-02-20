@@ -25,7 +25,7 @@
         }
         &:hover, &.active{
           .nav-link{
-            color: $mainColor;
+            color: $main-color;
           }
         }
         &.submenu{
@@ -85,7 +85,7 @@
               }
               &:hover{
                 .nav-link{
-                  background: $mainColor;
+                  background: $main-color;
                   color: #fff;
                 }
               }

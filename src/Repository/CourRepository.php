@@ -31,7 +31,7 @@ class CourRepository extends ServiceEntityRepository
             ;
     }
 
-    public function getPainatedCourses($page, $limit)
+    public function getPaginatedCourses($page, $limit)
     {
         return $this
             ->createQueryBuilder('c')

@@ -21,7 +21,7 @@ a:hover, a:focus {
 body {
   line-height: 24px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   color: #777777;
 }
@@ -76,7 +76,7 @@ button:focus {
 }
 .main_title p {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   line-height: 24px;
   color: #777777;
@@ -233,7 +233,7 @@ i {
 .top_menu .dn_btn {
   line-height: 42px;
   font-size: 12px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   color: #eaf6ff;
   padding: 0 .5rem;
@@ -426,12 +426,10 @@ i {
 }
 .post-item .date {
   font-size: 13px;
-  font-family: "Ubuntu", sans-serif;
   font-weight: normal;
-  color: #ffa400;
-  margin-top: 20px;
+  margin-top: 10px;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .post-item h6 {
   font-size: 14px;
@@ -503,11 +501,6 @@ i {
 }
 
 /*========= category blog css ===========*/
-.nn-blog-category {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
 .category-post {
   position: relative;
   text-align: center;
@@ -558,14 +551,11 @@ i {
   margin-bottom: 40px;
 }
 
-.blog_info {
-  padding-top: 30px;
-}
 .blog_info .post_tag {
   padding-bottom: 20px;
 }
 .blog_info .post_tag a {
-  font: 300 14px/21px "Roboto", sans-serif;
+  font: 400 14px/20px "Source Sans Pro", sans-serif;
   color: #495454;
 }
 .blog_info .post_tag a:hover {
@@ -575,26 +565,18 @@ i {
   color: #ffa400;
 }
 .blog_info .blog_meta li a {
-  font: 300 14px/20px "Roboto", sans-serif;
-  color: #777777;
+  font: 400 14px/20px "Source Sans Pro", sans-serif;
   vertical-align: middle;
   padding-bottom: 12px;
   display: inline-block;
+  color: #495454;
 }
 .blog_info .blog_meta li a i {
-  color: #495454;
-  font-size: 16px;
   font-weight: 600;
-  padding-left: 15px;
-  line-height: 20px;
   vertical-align: middle;
 }
 .blog_info .blog_meta li a:hover {
   color: #ffa400;
-}
-
-.blog_post img {
-  max-width: 90%;
 }
 
 .blog-details {
@@ -622,268 +604,6 @@ i {
   font-weight: 500;
   padding: 0 30px;
   background: #fff;
-}
-
-.blog_right_sidebar {
-  border: 1px solid #eeeeee;
-  background: #fafaff;
-  padding: 30px;
-}
-.blog_right_sidebar .widget_title {
-  font-size: 18px;
-  line-height: 25px;
-  background: #ffa400;
-  text-align: center;
-  color: #fff;
-  padding: 8px 0;
-  margin-bottom: 30px;
-}
-.blog_right_sidebar .search_widget .input-group .form-control {
-  font-size: 14px;
-  line-height: 29px;
-  border: 0;
-  width: 100%;
-  font-weight: 300;
-  color: #fff;
-  padding-left: 20px;
-  border-radius: 45px;
-  z-index: 0;
-  background: #ffa400;
-}
-.blog_right_sidebar .search_widget .input-group .form-control.placeholder {
-  color: #fff;
-}
-.blog_right_sidebar .search_widget .input-group .form-control:-moz-placeholder {
-  color: #fff;
-}
-.blog_right_sidebar .search_widget .input-group .form-control::-moz-placeholder {
-  color: #fff;
-}
-.blog_right_sidebar .search_widget .input-group .form-control::-webkit-input-placeholder {
-  color: #fff;
-}
-.blog_right_sidebar .search_widget .input-group .form-control:focus {
-  box-shadow: none;
-}
-.blog_right_sidebar .search_widget .input-group .btn-default {
-  position: absolute;
-  right: 20px;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  font-size: 14px;
-  color: #fff;
-  padding: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.blog_right_sidebar .author_widget {
-  text-align: center;
-}
-.blog_right_sidebar .author_widget .author-img {
-  max-width: 50%;
-  height: auto;
-}
-.blog_right_sidebar .author_widget h4 {
-  font-size: 18px;
-  line-height: 20px;
-  color: #495454;
-  margin-bottom: 5px;
-  margin-top: 30px;
-}
-.blog_right_sidebar .author_widget p {
-  margin-bottom: 0;
-}
-.blog_right_sidebar .author_widget .social_icon {
-  padding: 7px 0 15px;
-}
-.blog_right_sidebar .author_widget .social_icon a {
-  font-size: 14px;
-  color: #495454;
-  transition: all 0.2s linear;
-}
-.blog_right_sidebar .author_widget .social_icon a + a {
-  margin-left: 20px;
-}
-.blog_right_sidebar .author_widget .social_icon a:hover {
-  color: #ffa400;
-}
-.blog_right_sidebar .popular_post_widget .post_item img {
-  max-width: 40%;
-  height: auto;
-}
-.blog_right_sidebar .popular_post_widget .post_item .media-body {
-  justify-content: center;
-  align-self: center;
-  padding-left: 20px;
-}
-.blog_right_sidebar .popular_post_widget .post_item .media-body h3 {
-  font-size: 14px;
-  line-height: 20px;
-  color: #495454;
-  margin-bottom: 4px;
-  transition: all 0.3s linear;
-}
-.blog_right_sidebar .popular_post_widget .post_item .media-body h3:hover {
-  color: #ffa400;
-}
-.blog_right_sidebar .popular_post_widget .post_item .media-body p {
-  font-size: 12px;
-  line-height: 21px;
-  margin-bottom: 0;
-}
-.blog_right_sidebar .popular_post_widget .post_item + .post_item {
-  margin-top: 20px;
-}
-.blog_right_sidebar .post_category_widget .cat-list li {
-  border-bottom: 2px dotted #eee;
-  transition: all 0.3s ease 0s;
-  padding-bottom: 12px;
-}
-.blog_right_sidebar .post_category_widget .cat-list li a {
-  font-size: 14px;
-  line-height: 20px;
-  color: #777;
-}
-.blog_right_sidebar .post_category_widget .cat-list li a p {
-  margin-bottom: 0;
-}
-.blog_right_sidebar .post_category_widget .cat-list li + li {
-  padding-top: 15px;
-}
-.blog_right_sidebar .post_category_widget .cat-list li:hover {
-  border-color: #ffa400;
-}
-.blog_right_sidebar .post_category_widget .cat-list li:hover a {
-  color: #ffa400;
-}
-.blog_right_sidebar .newsletter_widget {
-  text-align: center;
-}
-.blog_right_sidebar .newsletter_widget .form-group {
-  margin-bottom: 8px;
-}
-.blog_right_sidebar .newsletter_widget .input-group-prepend {
-  margin-right: -1px;
-}
-.blog_right_sidebar .newsletter_widget .input-group-text {
-  background: #fff;
-  border-radius: 0;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 36px;
-  padding: 0 0 0 15px;
-  border: 1px solid #eeeeee;
-  border-right: 0;
-}
-.blog_right_sidebar .newsletter_widget .form-control {
-  font-size: 12px;
-  line-height: 24px;
-  color: #cccccc;
-  border: 1px solid #eeeeee;
-  border-left: 0;
-  border-radius: 0;
-}
-.blog_right_sidebar .newsletter_widget .form-control.placeholder {
-  color: #cccccc;
-}
-.blog_right_sidebar .newsletter_widget .form-control:-moz-placeholder {
-  color: #cccccc;
-}
-.blog_right_sidebar .newsletter_widget .form-control::-moz-placeholder {
-  color: #cccccc;
-}
-.blog_right_sidebar .newsletter_widget .form-control::-webkit-input-placeholder {
-  color: #cccccc;
-}
-.blog_right_sidebar .newsletter_widget .form-control:focus {
-  outline: none;
-  box-shadow: none;
-}
-.blog_right_sidebar .newsletter_widget .bbtns {
-  background: #ffa400;
-  color: #fff;
-  font-size: 12px;
-  line-height: 38px;
-  display: inline-block;
-  font-weight: 500;
-  padding: 0 24px 0 24px;
-  border-radius: 0;
-}
-.blog_right_sidebar .newsletter_widget .text-bottom {
-  font-size: 12px;
-}
-.blog_right_sidebar .tag_cloud_widget ul li {
-  display: inline-block;
-}
-.blog_right_sidebar .tag_cloud_widget ul li a {
-  display: inline-block;
-  border: 1px solid #eee;
-  background: #fff;
-  padding: 0 13px;
-  margin-bottom: 8px;
-  transition: all 0.3s ease 0s;
-  color: #495454;
-  font-size: 12px;
-}
-.blog_right_sidebar .tag_cloud_widget ul li a:hover {
-  background: #ffa400;
-  color: #fff;
-}
-.blog_right_sidebar .br {
-  width: 100%;
-  height: 1px;
-  background: #eeeeee;
-  margin: 30px 0;
-}
-
-.blog-pagination {
-  padding-top: 25px;
-  padding-bottom: 95px;
-}
-.blog-pagination .page-link {
-  border-radius: 0;
-}
-.blog-pagination .page-item {
-  border: none;
-}
-
-.page-link {
-  background: transparent;
-  font-weight: 400;
-}
-
-.blog-pagination .page-item.active .page-link {
-  background-color: #ffa400;
-  border-color: transparent;
-  color: #fff;
-}
-
-.blog-pagination .page-link {
-  position: relative;
-  display: block;
-  padding: 0.5rem 0.75rem;
-  margin-left: -1px;
-  line-height: 1.25;
-  color: #8a8a8a;
-  border: none;
-}
-
-.blog-pagination .page-link .lnr {
-  font-weight: 600;
-}
-
-.blog-pagination .page-item:last-child .page-link,
-.blog-pagination .page-item:first-child .page-link {
-  border-radius: 0;
-}
-
-.blog-pagination .page-link:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: #ffa400;
-  border-color: #eee;
 }
 
 /*============ Start Blog Single Styles  =============*/
@@ -1179,31 +899,31 @@ i {
   box-shadow: none;
   padding: 0 15px;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color: #999999;
 }
 .reservation_form .form-group input.placeholder {
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color: #999999;
 }
 .reservation_form .form-group input:-moz-placeholder {
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color: #999999;
 }
 .reservation_form .form-group input::-moz-placeholder {
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color: #999999;
 }
 .reservation_form .form-group input::-webkit-input-placeholder {
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color: #999999;
 }
@@ -1217,7 +937,7 @@ i {
 }
 .reservation_form .form-group .res_select .current {
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color: #999999;
 }
@@ -1259,7 +979,7 @@ i {
 .contact_info .info_item h6 {
   font-size: 16px;
   line-height: 24px;
-  color: "Roboto", sans-serif;
+  color: "Source Sans Pro", sans-serif;
   font-weight: bold;
   margin-bottom: 0;
   color: #495454;
@@ -1281,7 +1001,7 @@ i {
   line-height: 26px;
   color: #999;
   border: 1px solid #eeeeee;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   border-radius: 0;
   padding-left: 20px;
 }
@@ -1344,7 +1064,7 @@ i {
   text-align: center;
   color: #ffa400;
   padding-bottom: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 .modal-message .modal-dialog .modal-content .modal-header p {
   display: block;
@@ -2817,7 +2537,7 @@ h6 {
   background: #ffa400;
   padding: 0px 40px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 48px;
@@ -2840,7 +2560,7 @@ h6 {
   background: #fff;
   padding: 0px 32px;
   color: #495454;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 48px;
@@ -2864,7 +2584,7 @@ h6 {
   background: #ffa400;
   padding: 0px 50px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 50px;
@@ -2912,7 +2632,7 @@ h6 {
   display: inline-block;
   border-radius: 5px;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 500;
   transition: all 0.3s linear 0s;
 }
@@ -3078,7 +2798,7 @@ h6 {
 }
 .nn-team-item .nn-team-name p {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #777777;
   margin-bottom: 0;
 }
@@ -3157,7 +2877,7 @@ h6 {
 .cc-courses-inner .hover_text .list li a {
   color: #eaf6ff;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 .cc-courses-inner .hover_text .list li a i {
   padding-right: 6px;
@@ -3192,7 +2912,7 @@ h6 {
   margin-bottom: 0;
   line-height: 2;
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #495454;
   border-bottom: 1px solid transparent;
   border-radius: 0;
@@ -3237,7 +2957,7 @@ h6 {
   width: 100%;
   padding: .5rem;
   color: #777777;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   transition: all 0.3s linear 0s;
 }
@@ -3260,7 +2980,7 @@ h6 {
   line-height: 40px;
   padding: 0 18px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #777777;
 }
 .c_details_list .list li a span {
@@ -3678,7 +3398,7 @@ h6 {
   display: block;
   color: #ffa400;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -3708,7 +3428,7 @@ h6 {
 .nn-newsletter p {
   font-size: 14px;
   line-height: 24px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #ffa400;
   margin-bottom: 15px;
 }
@@ -3720,32 +3440,32 @@ h6 {
   border: none;
   padding: 0 15px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #777777;
   outline: none;
   box-shadow: none;
 }
 .nn-newsletter .input-group input.placeholder {
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   color: #777777;
 }
 .nn-newsletter .input-group input:-moz-placeholder {
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   color: #777777;
 }
 .nn-newsletter .input-group input::-moz-placeholder {
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   color: #777777;
 }
 .nn-newsletter .input-group input::-webkit-input-placeholder {
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   color: #777777;
 }

@@ -16,25 +16,25 @@
 		line-height: 26px;
 		b{
 			font-weight: bold;
-			color: $mainColor;
+			color: $main-color;
 		}
 		i{
-			color: $mainColor;
+			color: $main-color;
 			font-style: italic;
 		}
 		sup{
-			color: $mainColor;
+			color: $main-color;
 			font-style: italic;
 		}
 		sub{
-			color: $mainColor;
+			color: $main-color;
 			font-style: italic;
 		}
 		del{
-			color: $mainColor;
+			color: $main-color;
 		}
 		u{
-			color: $mainColor;
+			color: $main-color;
 		}
 	}
 }
@@ -157,10 +157,10 @@
 }
 .link-border{
 	background: transparent;
-	border: 1px solid $mainColor;
-	color: $mainColor;
+	border: 1px solid $main-color;
+	color: $main-color;
 	&:before{
-		background: $mainColor;
+		background: $main-color;
 	}
 }
 .radius{

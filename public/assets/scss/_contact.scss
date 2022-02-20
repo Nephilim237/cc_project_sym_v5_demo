@@ -39,12 +39,12 @@
 			box-shadow: none;
 			padding: 0 15px;
 			font-size: 13px;
-			font-family: $rob;
+			font-family: $sourcePro;
 			font-weight: 300;
 			color: #999999;
 			@include placeholder{
 				font-size: 13px;
-				font-family: $rob;
+				font-family: $sourcePro;
 				font-weight: 300;
 				color: #999999;
 			}
@@ -58,7 +58,7 @@
 			line-height: 36px;
 			.current{
 				font-size: 13px;
-				font-family: $rob;
+				font-family: $sourcePro;
 				font-weight: 300;
 				color: #999999;
 			}
@@ -98,13 +98,13 @@
             top: 0;
             font-size: 20px;
             line-height: 24px;
-            color: $mainColor;
+            color: $main-color;
             font-weight: 600;
         }
         h6{
             font-size: 16px;
             line-height: 24px;
-            color: $rob;
+            color: $sourcePro;
             font-weight: bold;
             margin-bottom: 0;
 			color: $font-color;
@@ -127,7 +127,7 @@
             line-height: 26px;
             color: #999;
             border: 1px solid #eeeeee;
-            font-family: $rob;
+            font-family: $sourcePro;
             border-radius: 0;
             padding-left: 20px;
             &:focus{
@@ -182,9 +182,9 @@
                 h2{
                     display: block;
                     text-align: center;
-                    color: $mainColor;
+                    color: $main-color;
                     padding-bottom: 10px;
-					font-family: $rob;
+					font-family: $sourcePro;
                 }
                 p{
                     display: block;

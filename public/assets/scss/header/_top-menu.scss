@@ -1,5 +1,5 @@
 .top_menu{
-  background: $mainColor;
+  background: $main-color;
   .header_social{
     li{
       a{
@@ -17,7 +17,7 @@
       }
       &:hover{
         a{
-          color: $mainColor;
+          color: $main-color;
         }
       }
     }
@@ -25,14 +25,14 @@
   .dn_btn{
     line-height: 42px;
     font-size: 12px;
-    font-family: $rob;
+    font-family: $sourcePro;
     font-weight: normal;
     color: $break-white;
     padding: 0 .5rem;
     @include transition;
     &:hover{
       background-color: $break-white;
-      color: $mainColor;
+      color: $main-color;
     }
     &:last-child{
       margin-right: 0;

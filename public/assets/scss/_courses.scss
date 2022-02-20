@@ -60,13 +60,13 @@
 				a{
 					color: $break-white;
 					font-size: 14px;
-					font-family: $rob;
+					font-family: $sourcePro;
 					i{
 						padding-right: 6px;
 					}
 
 					&:hover {
-						color: $mainColor;
+						color: $main-color;
 					}
 				}
 				&:last-child{
@@ -76,11 +76,11 @@
 		}
 		&:hover{
 			h4{
-				color: $mainColor;
+				color: $main-color;
 			}
 
 			.cat {
-				background: darken($mainColor, 5%);
+				background: darken($main-color, 5%);
 			}
 		}
 	}
@@ -106,12 +106,12 @@
 				margin-bottom: 0;
 				line-height: 2;
 				font-size: 1rem;
-				font-family: $rob;
+				font-family: $sourcePro;
 				color: $font-color;
 				border-bottom: 1px solid transparent;
 				border-radius: 0;
 				&.active, &:hover {
-					border-color: $mainColor;
+					border-color: $main-color;
 					background-color: rgba(#000, .1);
 				}
 			}
@@ -149,11 +149,11 @@
 						width: 100%;
 						padding: .5rem;
 						color: $pfont;
-						font-family: $rob;
+						font-family: $sourcePro;
 						font-size: 1rem;
 						@include transition;
 						&:hover{
-							color: $mainColor;
+							color: $main-color;
 						}
 					}
 					&:last-child{
@@ -179,7 +179,7 @@
 				line-height: 40px;
 				padding: 0 18px;
 				font-size: 14px;
-				font-family: $rob;
+				font-family: $sourcePro;
 				color: $pfont;
 				span{
 					float: right;
@@ -188,7 +188,7 @@
 			&:first-child{
 				a{
 					span{
-						color: $mainColor;
+						color: $main-color;
 					}
 				}
 			}

@@ -1,17 +1,9 @@
 .blog-info {
-    width: 25%;
-    flex: 0 0 25%;
-    text-align: right;
-    @media (max-width: $md) {
-        width: 100%;
-        flex: 0 0 100%;
-    }
-
+    font: 400 14px/1.2 $sourcePro;
     .post-tag {
         padding-bottom: 1rem;
 
         a {
-            font: 300 .9em/1.2 $ubuntu;
             color: $font-color;
             transition: .25s ease-in;
             &:active, &.active, &.hover, &:hover {
@@ -26,9 +18,6 @@
         a {
             display: inline-block;
             padding-bottom: 1rem;
-            font-size: .9em;
-            font-weight: 300;
-            line-height: 1;
             vertical-align: middle;
             color: $sec-color;
         }

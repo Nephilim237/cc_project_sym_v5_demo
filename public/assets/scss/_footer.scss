@@ -71,9 +71,9 @@
 	}
 	a{
 		display: block;
-		color: $mainColor;
+		color: $main-color;
 		font-size: 24px;
-		font-family: $rob;
+		font-family: $sourcePro;
 		font-weight: 500;
 		margin-bottom: 10px;
 		& + a{
@@ -97,7 +97,7 @@
 			}
 			&:hover{
 				a{
-					color: $mainColor;
+					color: $main-color;
 				}
 			}
 		}
@@ -108,8 +108,8 @@
 	p{
 		font-size: 14px;
 		line-height: 24px;
-		font-family: $rob;
-		color: $mainColor;
+		font-family: $sourcePro;
+		color: $main-color;
 		margin-bottom: 15px;
 	}
 	.input-group{
@@ -121,20 +121,20 @@
 			border: none;
 			padding: 0 15px;
 			font-size: 14px;
-			font-family: $rob;
+			font-family: $sourcePro;
 			color: $pfont;
 			outline: none;
 			box-shadow: none;
 			@include placeholder{
 				font-size: 14px;
-				font-family: $rob;
+				font-family: $sourcePro;
 				font-weight: normal;
 				color: $pfont;
 			}
 		}
 		.sub-btn{
 			border-radius: 0;
-			background: $mainColor;
+			background: $main-color;
 			outline: none !important;
 			box-shadow: none !important;
 			padding: 0;
@@ -143,7 +143,7 @@
 			color: #fff;
 
 			&:hover {
-				background: darken($mainColor, 6%);
+				background: darken($main-color, 6%);
 			}
 		}
 	}
@@ -166,14 +166,14 @@
     padding-top: 85px;
     .footer-text{
     	font-size: 1rem;
-		color: $mainColor;
+		color: $main-color;
 		opacity: .75;
 		i{
-			color: $mainColor;
+			color: $main-color;
 			opacity: 1;
 		}
         a{
-            color: $mainColor; 
+            color: $main-color;
 			opacity: 1;
         }
     }
@@ -182,7 +182,7 @@
         a{
             font-size: 14px;
             line-height: 30px;
-            color: $mainColor;
+            color: $main-color;
             margin-left: 6px;
             transition: all 0.3s linear;
 			background: transparent;
@@ -193,7 +193,7 @@
 			@include transition;
             &:hover{
                 color: #fff;
-				background: $mainColor;
+				background: $main-color;
             }
         }
     }

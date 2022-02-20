@@ -2,10 +2,10 @@
 ============================================================================================ */
 .main_btn{
 	display: inline-block;
-	background: $mainColor;
+	background: $main-color;
 	padding: 0px 40px;
 	color: #fff;
-	font-family: $rob;
+	font-family: $sourcePro;
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 48px;
@@ -13,13 +13,13 @@
 	outline: none !important;
 	box-shadow: none !important;
 	text-align: center;
-	border: 1px solid $mainColor;
+	border: 1px solid $main-color;
 	cursor: pointer;
 	border-radius: .25rem;
 	@include transition;
 	&:hover{
 		background: transparent;
-		color: $mainColor;
+		color: $main-color;
 	}
 }
 .main_btn2{
@@ -27,7 +27,7 @@
 	background: #fff;
 	padding: 0px 32px;
 	color: $font-color;
-	font-family: $rob;
+	font-family: $sourcePro;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 48px;
@@ -39,18 +39,18 @@
 	cursor: pointer;
 	@include transition;
 	&:hover{
-		background: $mainColor;
+		background: $main-color;
 		color: #fff;
-		border-color: $mainColor;
+		border-color: $main-color;
 	}
 }
 .submit_btn{
 	width: auto;
 	display: inline-block;
-	background: $mainColor;
+	background: $main-color;
 	padding: 0px 50px;
 	color: #fff;
-	font-family: $rob;
+	font-family: $sourcePro;
 	font-size: 13px;
 	font-weight: 500;
 	line-height: 50px;
@@ -58,18 +58,18 @@
 	outline: none !important;
 	box-shadow: none !important;
 	text-align: center;
-	border: 1px solid $mainColor;
+	border: 1px solid $main-color;
 	cursor: pointer;
 	@include transition;
 	&:hover{
 		background: transparent;
-		color: $mainColor;
+		color: $main-color;
 	}
 }
 
 .white_bg_btn{
 	display: inline-block;
-	background: $mainColor;
+	background: $main-color;
 	padding: 0px 35px;
 	color: $break-white;
 	font-family: $ubuntu;
@@ -85,7 +85,7 @@
 	@include transition;
 	&:hover{
 		background: $break-white;
-		color: $mainColor;
+		color: $main-color;
 		border-color: #eeeeee;
 	}
 }
@@ -93,15 +93,15 @@
 	padding: 0px 44px;
 	line-height: 50px;
 	background: $font-color;
-	color: $mainColor;
+	color: $main-color;
 	display: inline-block;
 	border-radius: 5px;
 	font-size: 13px;
-	font-family: $rob;
+	font-family: $sourcePro;
 	font-weight: 500;
 	@include transition;
 	&:hover{
-		background: $mainColor;
+		background: $main-color;
 		color: $font-color;
 	}
 }

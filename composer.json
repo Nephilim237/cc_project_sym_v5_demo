@@ -7,6 +7,7 @@
         "php": ">=7.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "ext-json": "*",
         "antishov/doctrine-extensions-bundle": "^1.4",
         "composer/package-versions-deprecated": "1.11.99.4",
         "doctrine/annotations": "^1.0",
@@ -15,6 +16,7 @@
         "doctrine/orm": "^2.10",
         "friendsofsymfony/ckeditor-bundle": "^2.3",
         "helios-ag/fm-elfinder-bundle": "^12.1",
+        "liip/imagine-bundle": "^2.7",
         "phpdocumentor/reflection-docblock": "^5.3",
         "sensio/framework-extra-bundle": "^6.1",
         "symfony/asset": "5.3.*",
@@ -48,8 +50,8 @@
         "symfonycasts/verify-email-bundle": "^1.6",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/intl-extra": "^3.3",
-        "twig/twig": "^2.12|^3.0",
-        "ext-json": "*"
+        "twig/string-extra": "^3.3",
+        "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
         "doctrine/data-fixtures": "^1.5",

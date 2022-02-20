@@ -185,4 +185,15 @@ class Post
 
         return $this;
     }
+
+    /**
+     * Rajoute un css en dur dans la balise pour mettre en forme la bannière de l'article détaillé
+     * @param null|string $image
+     *
+     * @return string
+     */
+    public function setBanner(?string $image = '')
+    {
+        return "background: linear-gradient(to bottom, rgba(0, 0, 0, .75) 25%, rgba(255, 255, 255, .4)), url($image) center no-repeat;";
+    }
 }

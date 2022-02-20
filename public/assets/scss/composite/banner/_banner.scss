@@ -1,6 +1,6 @@
 .banner {
   padding: 12em 2em 8em 2em;
-  background: linear-gradient(to bottom, rgba(#000, .75) 75%, rgba(#fff, .4)), url("../imgs/banner/banner.jpg") no-repeat top;
+  background: linear-gradient(to bottom, rgba(#000, .75) 75%, rgba(#fff, .4)), url("../img/banner/main-banner.jpg") no-repeat top;
   background-size: cover;
   text-align: center;
   border-top: .5rem solid #ffa400;
@@ -8,7 +8,7 @@
     &.single-banner {
         -webkit-background-size: cover !important;
         background-size: cover !important;
-        height: 200px;
+        height: 350px;
 
         .b-title {
             margin-top: -5rem;
@@ -41,11 +41,10 @@
 
     p {
       color: #fff;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 400;
-      margin-bottom: 2rem;
       @media (max-width: $md) {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
   }

@@ -125,10 +125,7 @@
 	.category-post img{
         width: 100%;
     }
-	.category-post {
-		max-width: 360px;
-		margin: 0 auto;
-	}
+
 	.nn-blog-category .col-lg-4{
         margin-top: 30px;
     }

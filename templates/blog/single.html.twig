@@ -1,0 +1,351 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Banner section -->
+    <section class="banner single-banner" id="banner"
+             style="{{ post.setBanner(asset('uploads/posts/' ~ post.images[0].name)) }}">
+        <div class="container">
+            <div class="banner-wrapper">
+                <h1 class="b-title text-orange ubuntu mb-3">{{ post.title }}</h1>
+                <div class="page-path">
+                    <a href="{{ path('home') }}">Accueil<i class="fas fa-caret-right"></i></a>
+                    <a href="{{ path('blog') }}">Blog<i class="fas fa-caret-right"></i></a>
+                    <a href="{{ path('single', {'slug': post.slug}) }}">{{ post.title }}</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End banner section -->
+
+    <!-- Blog area -->
+    <div class="blog-area single-post-area py-70" id="blog-area">
+        <div class="container">
+            <div class="area-wrapper row">
+                <div class="col-lg-8">
+                    <div class="post-elt pb-sm-5 pb-lg-0">
+                        <div class="single-post cc-row"><!-- single post details -->
+                            <div class="blog-info col-lg-3 col-md-12">
+                                <div class="post-tag">
+                                    {% for category in post.category %}
+                                        <a href="#">{{ category }}, </a>
+                                    {% endfor %}
+                                </div>
+                                <ul class="blog-meta">
+                                    <li class="author">
+                                        <a href="#">
+                                            {{ post.author.fullName }}
+                                            <i class="ri-user-2-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li class="date">
+                                        <a href="#">
+                                            {{ post.createdAt | date("Y-m-d H:i") | format_datetime('medium', 'short', locale='fr') }}
+                                            <i class="ri-calendar-2-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li class="consulted">
+                                        <a href="#">Consulte 1.2M de fois
+                                            <i class="far fa-eye"></i>
+                                        </a>
+                                    </li>
+                                    <li class="comments">
+                                        <a href="#">197 commentaires
+                                            <i class="fas fa-comments"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="post-img col-lg-9 col-lg-12">
+                                {#                            <img class="img-fluid"#}
+                                {#                                 src="{{ asset('/uploads/posts/' ~ post.images[0].name ) | imagine_filter('posts_blog') }}"#}
+                                {#                                 alt="{{ post.title }}">#}
+                            </div>
+
+                            <div class="blog-details px-15">
+                                <h2 class="post-title">{{ post.title }}</h2>
+                                <p>{{ post.content | raw }}</p>
+                            </div>
+                        </div><!-- End single post details -->
+
+                        <div class="navigation-area px-15 row"><!-- Navigation begin -->
+                            <div class="nav-left px-15"><!-- Article précedent -->
+                                <?php if ($key > 0): ?>
+                                <div class="thumb mr-1">
+                                    <a href="single.php?id=<?= $prevPost->id ?>"><img src="<?= $prevPost->post_image ?>"
+                                                                                      alt="" class="img"></a>
+                                </div>
+                                <div class="arrow"><a href="#"><i class="fas fa-arrow-left"></i></a></div>
+                                <div class="details">
+                                    <p><small>Article précédent.</small></p>
+                                    <a href="single.php?id=<?= $prevPost->id ?>">
+                                        <h4><?= $prevPost->title ?></h4>
+                                    </a>
+                                </div>
+                                <?php endif; ?>
+                            </div><!-- Fin Article précedent -->
+                            <div class="nav-right px-15"><!-- Article suivant -->
+                                <?php if($key < count($postsId) - 1): ?>
+                                <div class="thumb ml-1">
+                                    <a href="single.php?id=<?= $nextPost->id ?>"><img src="<?= $nextPost->post_image ?>"
+                                                                                      alt="" class="img"></a>
+                                </div>
+                                <div class="arrow"><a href="single.php?id=<?= $nextPost->id ?>"><i
+                                                class="fas fa-arrow-right"></i></a></div>
+                                <div class="details">
+                                    <p><small>Article suivant.</small></p>
+                                    <a href="single.php?id=<?= $nextPost->id ?>">
+                                        <h4><?= $nextPost->title ?></h4>
+                                    </a>
+                                </div>
+                                <?php endif; ?>
+                            </div><!-- Fin Article suivant -->
+                        </div><!-- End Navigation -->
+
+                        <div class="comment-area px-15" id="comment-area">
+                            <h4>00 Commentaires</h4>
+                            <div class="comment-row mb-1">
+                                <div class="single-comment cc-row">
+                                    <div class="thumb px-15">
+                                        <img src="<?= $comment->image ?>" alt="" class="img">
+                                    </div>
+                                    <div class="desc px-15">
+                                        <h5><a href="#">@Utilisateur</a></h5>
+                                        <div class="comment-options">
+                                            <p class="cc-row">
+                                                <small class="date px-15">17 Fev. 2022</small>
+                                                <small class="reply px-15">Répondre</small>
+                                            </p>
+                                            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                               Beatae consectetur cum distinctio dolorem esse harum hic,
+                                                               mollitia neque, quidem quod sapiente voluptatum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-form px-15">
+                            <h4>Laissez un commentaire</h4>
+                            <form action="" method="post">
+                                <div class="cc-form-group cc-form-inline">
+                                    <div class="cc-form-group">
+                                        <input type="text" name="name" class="cc-form-control" placeholder="Votre nom"
+                                               >
+
+                                    </div>
+                                    <div class="cc-form-group">
+                                        <input type="text" name="firstname" class="cc-form-control"
+                                               placeholder="Votre prénom">
+
+                                    </div>
+                                </div>
+
+                                <div class="cc-form-group">
+                                    <input type="email" name="email" class="cc-form-control" placeholder="Votre email"
+                                           >
+                                </div>
+
+                                <div class="cc-form-group">
+                                    <textarea cols="30" rows="5" name="message" class="cc-form-control"
+                                              placeholder="Votre message"></textarea>
+                                </div>
+
+                                <button class="cc-btn cc-btn-outline" type="submit">
+                                    Commenter
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="blog-right-side">
+                        <aside class="single-sidebar-widget search-widget">
+                            <div class="cc-input-group">
+                                <input type="text" class="cc-form-control" placeholder="Rechercher articles ...">
+                                <span class="input-group-btn">
+                                        <button class="cc-btn btn-widget" type="button">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                </span>
+                            </div><!-- /input-group -->
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget text-center author-widget">
+                            <img class="author-img rounded-circle" src="{{ asset('assets/img/team/m4.jpg') }}" alt="Image de {{ post.author.fullName }}">
+                            <h4 class="text-orange">{{ post.author.fullName }}</h4>
+                            <p>{{ post.author.speciality }}</p>
+                            <div class="social-icon">
+                                <a href="https://www.facebook.com/meta.hack.52"><i class="fab fa-2x fa-facebook"></i></a>
+                                <a href="https://twitter.com/Nephilim237"><i class="fab fa-2x fa-twitter"></i></a>
+                                <a href="https://github.com/Nephilim237"><i class="fab fa-2x fa-github"></i></a>
+
+                                {#
+                                    Boutton activant le formulaire pour l'envoie de message à l'auteur
+                                    Le formulaire en lui même se trouve tou à la fin du endblock body
+                                #}
+                                <a href="https://github.com/Nephilim237" data-bs-toggle="modal" data-bs-target="#authorContact">
+                                    <i class="fas fa-2x fa-paper-plane"></i>
+                                </a>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Corporis aperiam suscipit
+                               optio recusandae hic soluta perspiciatis quibusdam quod et quam nemo dolor voluptatum at,
+                               earum quia saepe iusto eum obcaecati!
+                            </p>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget popular-post-widget">
+                            <h3 class="widget-title">Articles populaires</h3>
+                            <div class="row flex-lg-column flex-row">
+                                <div class="media post_item d-flex col-md-6 col-lg-12">
+                                    <img src="{{ asset('assets/img/blog/cat-post/repas8.jpg') |imagine_filter('posts_popular') }}"
+                                         alt="post">
+                                    <div class="media-body">
+                                        <a href="#"><h3>La cryptomonnaie et ses risques</h3></a>
+                                        <p>Il y a 6 heures</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item d-flex col-md-6 col-lg-12">
+                                    <img src="{{ asset('assets/img/blog/cat-post/repas7.jpg') |imagine_filter('posts_popular') }}"
+                                         alt="post">
+                                    <div class="media-body">
+                                        <a href="#"><h3>La perenite du web</h3></a>
+                                        <p>23 Sept 2020</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item d-flex col-md-6 col-lg-12">
+                                    <img src="{{ asset('assets/img/blog/cat-post/repas4.jpg') |imagine_filter('posts_popular') }}"
+                                         alt="post">
+                                    <div class="media-body">
+                                        <a href="#"><h3>Laravel se fait devancer</h3></a>
+                                        <p>il y a 04 minutes</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item d-flex col-md-6 col-lg-12">
+                                    <img src="{{ asset('assets/img/blog/cat-post/repas12.jpg') |imagine_filter('posts_popular') }}"
+                                         alt="post">
+                                    <div class="media-body">
+                                        <a href="#"><h3>Le vaste univers du code</h3></a>
+                                        <p>moins d'une minute</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget ads-widget">
+                            <a href="#"><img class="img-fluid" src="img/blog/add.jpg" alt=""></a>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget post-category-widget">
+                            <h4 class="widget-title">Classement par categorie</h4>
+                            <ul class="list cat-list">
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Technologie</p>
+                                        <p>37</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Langage</p>
+                                        <p>24</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Web</p>
+                                        <p>59</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Mobile</p>
+                                        <p>29</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>IA</p>
+                                        <p>15</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>DeepLearning</p>
+                                        <p>09</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Framework</p>
+                                        <p>44</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget newsletter-widget">
+                            <h4 class="widget-title">Newsletter</h4>
+                            <p>Abonnez-vous à notre newsletter et soyez informer des dernières avancées dans le domaine
+                               de votre choix</p>
+                            <div class="cc-form-group">
+                                <div class="cc-input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="cc-form-control" placeholder="Entrez email">
+                                </div>
+                                <a href="#" class="bbtns">S'inscrire</a>
+                            </div>
+                            <p class="text-bottom"><small>Vous pouvez désister à tout moment</small></p>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget tag-cloud-widget">
+                            <h4 class="widget-title">Liste des etiquettes</h4>
+                            <ul class="list">
+                                {% for category in categories %}
+                                    <li><a href="#">{{ category.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" >
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="authorContact" tabindex="-1" aria-labelledby="authorContactLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title piazzo" id="authorContactLabel">
+                        Contacter l'auteur <i class="fas fa-paper-plane"></i>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm rounded-0" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary btn-sm rounded-0">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+

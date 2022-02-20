@@ -14,7 +14,7 @@
 		padding-top: 2rem;
 
 		.owl-dot span{
-			background: $mainColor;
+			background: $main-color;
 			width: 20px;
 			height: 20px;
 			transform: translate3d(0, -50%, 0) scale(.4);
@@ -23,7 +23,7 @@
 		}
 
 		.owl-dot:hover span, .owl-dot.active span {
-			background: lighten($mainColor, 10%);
+			background: lighten($main-color, 10%);
 			transform: translate3d(0, -50%, 0) scale(.7);
 		}
 	}
@@ -71,7 +71,7 @@
 	.raterInfo {
 		padding-bottom: 2rem;
 		h5.raterName{
-			color: $mainColor;
+			color: $main-color;
 			font-size: 14px;
 			margin: 15px 0 10px;
 			font-weight: 300;
