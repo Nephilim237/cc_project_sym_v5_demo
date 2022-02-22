@@ -1,0 +1,46 @@
+<!-- Modal -->
+<div class="modal fade" id="contactAuthor" tabindex="-1" aria-labelledby="contactAuthorLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            {% for message in app.flashes('danger') %}
+                <div class="alert alert-danger" role="alert">{{ message }}</div>
+            {% endfor %}
+            <div class="modal-header">
+                <h5 class="modal-title piazzo" id="contactAuthorLabel">
+                    Laissez nous un message <i class="fas fa-paper-plane"></i>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            {{ form_start(form) }}
+            <div class="modal-body">
+                <div class="field">
+                    {{ form_label(form.title) }}
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="title"><i class="fas fa-heading"></i></span>
+                        {{ form_widget(form.title) }}
+                    </div>
+                </div>
+                <div class="field">
+                    {{ form_label(form.email) }}
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="title"><i class="fas fa-envelope"></i></span>
+                        {{ form_widget(form.email) }}
+                    </div>
+                </div>
+                <div class="field">
+                    {{ form_label(form.message) }}
+                    <div class="mb-3">
+                        {{ form_widget(form.message) }}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm rounded-0" data-bs-dismiss="modal">Fermer</button>
+                <button class="cc-btn cc-btn-mini cc-btn-outline" type="submit">
+                    Envoyer le message <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>

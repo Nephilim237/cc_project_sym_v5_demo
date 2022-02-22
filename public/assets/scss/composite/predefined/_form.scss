@@ -27,15 +27,16 @@
     width: 100%;
     padding: .375rem 1rem;
     font-size: 13px;
-    color: #999999;
-    border: 1px solid #f7f7f7;
-    transition: box-shadow .25s ease;
+    color: $font-color;
+    border: 1px solid transparent;
+    border-color: #adb7b7;
+    transition: box-shadow .25s ease, border-color .3s ease-in-out;
 
     &:hover, &:focus {
         border-color: transparentize($main-color, .75);
     }
 
     &:focus {
-        box-shadow: 1px 1px 3px transparentize($main-color, .4);
+        box-shadow: 1px 1px 3px transparentize($main-color, .55);
     }
 }

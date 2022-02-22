@@ -11,7 +11,9 @@
             </div>
             <div class="cc-header-contact d-flex">
                 <a class="dn_btn" href="tel:+237651479663"><i class="fas fa-phone-alt"></i>+237 651 479 663</a>
-                <a class="dn_btn" href="mailto:codingcity9014@gmail.com"><i class="fas fa-at"></i>codingcity9014@gmail.com</a>
+                <a class="dn_btn" href="mailto:codingcity9014@gmail.com">
+                    <i class="fas fa-at"></i>codingcity9014@gmail.com
+                </a>
             </div>
         </div>
     </div>
@@ -33,23 +35,31 @@
                 <div class="collapse navbar-collapse offset justify-content-end" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('home') }}">Accueil<i class="fas fa-home"></i></a>
+                            <a class="nav-link" href="{{ path('home') }}">
+                                Accueil<i class="fas fa-home"></i>
+                            </a>
                         </li>
                         {#                        <li class="nav-item"><a class="nav-link" href="#">Cours</a>#}
                         {#                        <li class="nav-item">#}
                         {#                            <a href="#" class="nav-link">Tutoriels <i class="fas fa-chalkboard-teacher"></i></a>#}
                         {#                        </li>#}
+{#                        <li class="nav-item">#}
+{#                            <a class="nav-link" href="#">Forum <i class="fas fa-users"></i></a>#}
+{#                        </li>#}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Forum <i class="fas fa-users"></i></a>
+                            <a class="nav-link" href="{{ path('blog') }}">
+                                Blog <i class="fas fa-blog"></i>
+                            </a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="{{ path('blog') }}">Blog <i class="fas fa-blog"></i></a></li>
                         {#                        <li class="nav-item submenu dropdown">#}
                         {#                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <i class="fas fa-blog"></i></a>#}
                         {#                            <ul class="dropdown-menu">#}
                         {#                            </ul>#}
                         {#                        </li>#}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact<i class="fas fa-envelope-open-text"></i></a>
+                            <a class="nav-link" href="{{ path('contact') }}">
+                                Contact<i class="fas fa-envelope-open-text"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>

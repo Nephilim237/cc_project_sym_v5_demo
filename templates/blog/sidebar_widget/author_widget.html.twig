@@ -1,0 +1,22 @@
+
+<aside class="single-sidebar-widget text-center author-widget">
+    <img class="author-img rounded-circle" src="{{ asset('assets/img/team/m4.jpg') }}" alt="Image de {{ post.author.fullName }}">
+    <h4 class="text-orange">{{ post.author.fullName }}</h4>
+    <p>{{ post.author.speciality }}</p>
+    <div class="social-icon">
+        <a href="https://www.facebook.com/meta.hack.52"><i class="fab fa-2x fa-facebook"></i></a>
+        <a href="https://twitter.com/Nephilim237"><i class="fab fa-2x fa-twitter"></i></a>
+        <a href="https://github.com/Nephilim237"><i class="fab fa-2x fa-github"></i></a>
+
+        {# Boutton activant le formulaire pour l'envoie de message à l'auteur
+            Le formulaire en lui même se trouve dans le dossier partials #}
+        <a href="https://github.com/Nephilim237" data-bs-toggle="modal" data-bs-target="#contactAuthor">
+            <i class="fas fa-2x fa-paper-plane"></i>
+        </a>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Corporis aperiam suscipit
+       optio recusandae hic soluta perspiciatis quibusdam quod et quam nemo dolor voluptatum at,
+       earum quia saepe iusto eum obcaecati!
+    </p>
+    <div class="br"></div>
+</aside>

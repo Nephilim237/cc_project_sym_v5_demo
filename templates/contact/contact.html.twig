@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Nous contacter
+{% endblock %}
+
+{% block body %}
+    <!-- Banner section -->
+    <section class="banner" id="banner">
+        <div class="container">
+            <div class="banner-wrapper">
+                <h1 class="b-title text-orange ubuntu mb-3">Nous contacter</h1>
+                <div class="page-path">
+                    <a href="{{ path('home') }}">Accueil<i class="fas fa-caret-right"></i></a>
+                    <a href="{{ path('contact') }}">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section> <!-- End banner section -->
+
+    <!-- Contact info section -->
+    <section class="contact-info cc-row py-70" id="contact-info">
+        <div class="container">
+            <div class="contact-wrapper cc-row">
+                <div class="c-info px-15">
+                    <div class="info-item cc-row">
+                        <div class="info-icon px-15">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="info-text px-15">
+                            <h6>Kribi, Cameroun</h6>
+                            <p>BP.999, Avenue des banques</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item cc-row">
+                        <div class="info-icon px-15">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-text px-15">
+                            <h6>00 (237) 694372572 / 651479663</h6>
+                            <p>Lun. à Ven., 8h à 16h</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item cc-row">
+                        <div class="info-icon px-15">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text px-15">
+                            <h6>codingcity9014@gmail.com</h6>
+                            <p>Pour vos questions et vos suggestions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-form px-15">
+
+                    {{ form_start(contactForm, {'attr': {'class': 'row'}}) }}
+                    <div class="col-md-6 col-sm-10">
+                        <div class="cc-form-group">
+                            {{ form_widget(contactForm.name) }}
+                        </div>
+                        <div class="input-group mb-3">
+                            {{ form_widget(contactForm.email) }}
+                        </div>
+                        <div class="input-group mb-3">
+                            {{ form_widget(contactForm.subject) }}
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-10">
+                        <div class="cc-form-group">
+                            {{ form_widget(contactForm.message) }}
+                        </div>
+                    </div>
+                    <div class="button-col px-15">
+                        <button class="cc-btn cc-btn-outline" type="submit">
+                            Envoyer le message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    {{ form_end(contactForm) }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

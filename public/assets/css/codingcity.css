@@ -260,15 +260,16 @@ ul, ol, li, dl {
   width: 100%;
   padding: .375rem 1rem;
   font-size: 13px;
-  color: #999999;
-  border: 1px solid #f7f7f7;
-  transition: box-shadow .25s ease;
+  color: #495454;
+  border: 1px solid transparent;
+  border-color: #adb7b7;
+  transition: box-shadow .25s ease, border-color .3s ease-in-out;
 }
 .cc-form-control:hover, .cc-form-control:focus {
   border-color: rgba(255, 164, 0, 0.25);
 }
 .cc-form-control:focus {
-  box-shadow: 1px 1px 3px rgba(255, 164, 0, 0.6);
+  box-shadow: 1px 1px 3px rgba(255, 164, 0, 0.45);
 }
 
 .fas, .far, .fab, .fa {
